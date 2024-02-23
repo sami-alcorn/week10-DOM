@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10</title>
+    <!--links for bootstrap css and my css page-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<!--class on body to use photo as background-->
+<body class="northern-lights">
+    <!--container that adds a top margin-->
+    <div class="container mt-5">
+        <!--div with id for the form to change the background color and margins-->
+        <div id="form-div">
+        <!--used container fluid so it is responsive-->    
+        <form class="container-fluid">
+            <div class="row">
+                <!--column size changes depending on screen size-->
+                <div class="col col-lg-4 col-12">
+                    <h6>Create your vacation bucketlist!</h6>
+                </div>
+                <div class="col col-lg-4 col-12">
+                    <!--user input has id so I can create a variable in js by using the getElementById-->
+                    <input id="trip-input" type="text" class="form-control">
+                </div>
+                <div class="col col-lg-4 col-12"> 
+                    <!--button with onclick function that adds user input to the table
+                    and has event so I can use prevent default method
+                    in the function, btn-info styles it to be the turquoise color-->  
+                    <button onclick="addTrip(event)" class="btn btn-info">Add to List</button>
+                </div>
+            </div>
+        </form>
+        </div>
+        <br>
+        <!--responsive, striped, dark table that has bucketlist destinations, this is what
+        user input is added to-->
+        <table class="table table-responsive table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>Dream Destinations</th>
+                </tr>
+            </thead>
+            <!--user input specifically added to the table body, has id so I can create a variable in
+            js by using the getElementById-->
+            <tbody id="trip-table-body">
+                <!--started the table with my top two dream destinations-->
+                <tr>
+                    <td>Iceland</td>
+                </tr>
+                <tr>
+                    <td>Thailand</td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   <!--script for my js page, jquery, and bootstrap bundle.js--> 
+   <script src="index.js"></script>
+   <script src="node_modules/jquery/dist/jquery.js"></script> 
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js "></script>
+</body>
+</html>

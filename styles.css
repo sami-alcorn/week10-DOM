@@ -1,0 +1,28 @@
+/*centers my headers, table, and form*/
+h1, h6, table, form{
+    text-align: center;
+}
+/*changes header inside form color to white*/
+h6 {
+    color: white;
+}
+/*spaces the header, input, and button*/
+form {
+    display: flex;
+    justify-content: space-around;
+}
+/*uses photo as background for the page*/
+.northern-lights {
+    background-image: url(northern\ lights.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*changes background color of form and adjusted padding and side margins*/
+#form-div {
+    background-color: #212529;
+    padding: 25px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
